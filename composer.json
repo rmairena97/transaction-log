@@ -1,0 +1,18 @@
+{
+    "name": "rmairena/transaction-http",
+    "description": "Manage the traceability and logs of the integrations you have with the different services you want to integrate.",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Rmairena\\TransactionHttp\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Ramon Amilcar Mairena Vargas",
+            "email": "rmairena@mintrabajo.gob.gt"
+        }
+    ],
+    "require": {}
+}

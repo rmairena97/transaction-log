@@ -8,7 +8,7 @@ class TransactionType extends Model {
 
     public function getTable()
     {
-        return config('table-definition.TransactionType');
+        return config('table-definition.TransactionType')['table_name'];
     }
 
 }

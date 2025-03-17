@@ -8,7 +8,7 @@ class TransactionTrace extends Model {
 
     public function getTable()
     {
-        return config('table-definition.TransactionTrace');
+        return config('table-definition.TransactionTrace')['table_name'];
     }
 
     public static function getLastTrace($transaction_id) : Model {

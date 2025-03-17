@@ -8,7 +8,7 @@ class Thread extends Model {
 
     public function getTable()
     {
-        return config('table-definition.Thread');
+        return config('table-definition.Thread')['table_name'];
     }
 
     public static function getModelRow($reference_key, $service_identifier) {

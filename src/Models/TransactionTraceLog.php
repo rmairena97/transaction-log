@@ -8,7 +8,7 @@ class TransactionTraceLog extends Model {
 
     public function getTable()
     {
-        return config('table-definition.TransactionTraceLog');
+        return config('table-definition.TransactionTraceLog')['table_name'];
     }
 
 }

@@ -11,7 +11,7 @@ class Transaction extends Model
 
     public function getTable()
     {
-        return config('table-definition.Transaction');
+        return config('table-definition.Transaction')['table_name'];
     }
 
     protected static function booted() {

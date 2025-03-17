@@ -12,7 +12,7 @@ class TransactionHttpServiceProvider extends ServiceProvider {
     }
 
     public function register(){
-        $this->mergeConfigFrom(__DIR__.'../config/table-definition.php', 'rmairena.transaction.http');
+        $this->mergeConfigFrom(__DIR__.'/../config/table-definition.php', 'rmairena.transaction.http');
 
         $this->app->bind('rmairena.transaction.http', function() {
             return new TransactionHandler;

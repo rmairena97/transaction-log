@@ -18,6 +18,7 @@ class TransactionHandler extends ThreadHandler {
         if ($this->checkActiveThread()) {
             $this->LoadTransaction();
         }
+
         $this->storeThread($transaction_type_id);
         $this->transaction =  TransactionModel::create([
             'thread_id' => $this->getThreadModel()->id,

@@ -32,7 +32,8 @@ class ThreadHandler {
 
 
     public function checkActiveThread() : bool {
-        return $this->getThreadModel()->active;
+        // if ( $thread = $this->getThreadModel()) 
+        return $this->getThreadModel() ? $this->getThreadModel()->active : false;
     }
 
     public function getThreadModel() : Model {

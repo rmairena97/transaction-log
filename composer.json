@@ -14,5 +14,15 @@
             "email": "rmairena@mintrabajo.gob.gt"
         }
     ],
-    "require": {}
+    "require": {},
+    "extra": {
+        "laravel":{
+            "providers": [
+                "Rmairena\\TransactionHttp\\providers\\TransactionHttpServiceProvider"
+            ],
+            "alianses": {
+                "TransactionHttp": "Rmairena\\TransactionHttp\\Facades\\TransactionHttpFacade"
+            }
+        }
+    }
 }

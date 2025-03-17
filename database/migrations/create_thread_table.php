@@ -18,6 +18,7 @@ class CreateThreadTable extends Migration {
             $table->string('reference_key', 150)->index();
             $table->unsignedBigInteger('transaction_type_id');
             $table->string('service_identifier')->index();
+            $table->string('active')->default(true);
             $table->timestamps();
 
             //foreign key

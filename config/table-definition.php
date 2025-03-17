@@ -14,6 +14,6 @@ return [
         'table_name'=> 'transaction_trace'
     ],
     'TransactionTraceLog'=> [
-        'table_name'=> 'transaction'
+        'table_name'=> 'transaction_trace_log'
     ],
 ];

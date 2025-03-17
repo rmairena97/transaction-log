@@ -15,7 +15,7 @@ class CreateTransactionTable extends Migration {
      public function up(){
         Schema::create($this->getTableName("Transaction"), function(Blueprint $table) {
             $table->id();
-            $table->boolen('completed')->default(false);
+            $table->boolean('completed')->default(false);
             $table->unsignedBigInteger('thread_id');
             $table->timestamps();
 

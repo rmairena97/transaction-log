@@ -19,7 +19,7 @@ class CreateTransactionTrace extends Migration {
             $table->string('step_name');
             $table->longText("payload")->nullable();
             $table->longText("client_result")->nullable();
-            $table->text("step_status")->default(false);
+            $table->boolean("step_status")->default(false);
             $table->timestamps();
             //foreign key
             $table->foreign('transaction_id')->references('id')->on($this->getTableName("Transaction"));

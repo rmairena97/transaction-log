@@ -13,12 +13,8 @@ class TransactionHandler extends ThreadHandler {
     private $last_trace;
     private $transaction = null;
 
-    public function __construct($reference_key, $service_identifier) {
-        parent::__construct($reference_key, $service_identifier);
-    }
-
-
-    public function beginTransactionLog() : void {
+    public function beginTransactionLog(string $reference_key, string $service_identifider) : void {
+        $this->initThread($reference_key, $service_identifider);
         if ($this->checkActiveThread()) {
             $this->LoadTransaction();
         }

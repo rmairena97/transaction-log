@@ -11,7 +11,14 @@ class ThreadHandler {
     private $reference_key;
     private $service_identifier;
 
-    public function __construct($reference_key, $service_identifier) {
+    // public function __construct($reference_key, $service_identifier) {
+    //     $this->reference_key = $reference_key;
+    //     $this->service_identifier = $service_identifier;
+        
+    //     if ( $this->checkThreadInstance() && !$this->checkActiveThread()) throw new Exception("Thread is already been closed", 500);
+    // }
+
+    protected function initThread($reference_key, $service_identifier): void{
         $this->reference_key = $reference_key;
         $this->service_identifier = $service_identifier;
         

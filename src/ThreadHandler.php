@@ -10,6 +10,7 @@ class ThreadHandler {
     
     private $reference_key;
     private $service_identifier;
+    private $thread;
 
     // public function __construct($reference_key, $service_identifier) {
     //     $this->reference_key = $reference_key;
@@ -35,6 +36,7 @@ class ThreadHandler {
     }
 
     public function getThreadModel() : Model {
+        if ( $this->thread) return $this->thread;
         if ($thread  = ThreadModel::getModelRow($this->reference_key, $this->service_identifier))
          throw new Exception("Thread does't exists", 404);
         return $thread;
@@ -42,9 +44,10 @@ class ThreadHandler {
 
     public function storeThread($transaction_type_id) : void {
         try{
-            ThreadModel::create([
+            $this->thread = ThreadModel::create([
                 'reference_key' => $this->reference_key,
-                'service_identifier' => $this->service_identifier
+                'service_identifier' => $this->service_identifier,
+                'transaction_type_id' => $transaction_type_id
             ]);
         }catch(Exception $ex){
             throw $ex;

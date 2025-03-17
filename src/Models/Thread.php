@@ -4,7 +4,7 @@ namespace Rmairena\TransactionHttp\Models;
 use Illuminate\Database\Eloquent\Model;
 
 class Thread extends Model {
-    protected $fillable = ['active', 'reference_key', 'service_identifier'];
+    protected $fillable = ['active', 'reference_key', 'service_identifier', 'transaction_type_id'];
 
     public function getTable()
     {

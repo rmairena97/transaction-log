@@ -33,14 +33,11 @@ class ThreadHandler {
 
     public function checkActiveThread() : bool {
         // if ( $thread = $this->getThreadModel()) 
-        return $this->getThreadModel() ? $this->getThreadModel()->active : false;
+        return $this->getThreadModel() ? $this->getThreadModel()->active : true;
     }
 
-    public function getThreadModel() : Model {
-        if ( $this->thread) return $this->thread;
-        if ($thread  = ThreadModel::getModelRow($this->reference_key, $this->service_identifier))
-         throw new Exception("Thread does't exists", 404);
-        return $thread;
+    public function getThreadModel() : ?Model {
+        return $this->thread ?? ThreadModel::getModelRow($this->reference_key, $this->service_identifier);
     }
 
     public function storeThread($transaction_type_id) : void {

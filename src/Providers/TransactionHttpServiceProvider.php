@@ -28,20 +28,25 @@ class TransactionHttpServiceProvider extends ServiceProvider {
         $this->publishes([
             __DIR__.'/../../database/migrations/create_transaction_type_table.php' => database_path('migrations/'.date('Y_m_d_His', time()).'_create_transaction_type_table.php'),
         ], 'rmairena.transaction.http-migrations');
+        sleep(0.1);
         $this->publishes([
             __DIR__.'/../../database/migrations/create_thread_table.php' => database_path('migrations/'.date('Y_m_d_His', time()).'_create_thread_table.php'),
         ], 'rmairena.transaction.http-migrations');
+        sleep(0.1);
         $this->publishes([
             __DIR__.'/../../database/migrations/create_transaction_table.php' => database_path('migrations/'.date('Y_m_d_His', time()).'_create_transaction_table.php'),
         ], 'rmairena.transaction.http-migrations');
+        sleep(0.1);
 
         $this->publishes([
             __DIR__.'/../../database/migrations/create_transaction_trace_table.php' => database_path('migrations/'.date('Y_m_d_His', time()).'_create_transaction_trace_table.php'),
         ], 'rmairena.transaction.http-migrations');
+        sleep(0.1);
 
         $this->publishes([
             __DIR__.'/../../database/migrations/create_transaction_trace_log.php' => database_path('migrations/'.date('Y_m_d_His', time()).'_create_transaction_trace_log.php'),
         ], 'rmairena.transaction.http-migrations');
+        sleep(0.1);
 
         $this->publishes([
             __DIR__.'/../../database/seeds/TransactionTypeSeeder.php' => database_path('seeds/TransactionTypeSeeder.php'),

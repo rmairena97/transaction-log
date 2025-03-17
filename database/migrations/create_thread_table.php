@@ -22,7 +22,7 @@ class CreateThreadTable extends Migration {
             $table->timestamps();
 
             //foreign key
-            $table->foreign('transaction_type_id')->references('id')->on($this->getTableName("Thread"));
+            $table->foreign('transaction_type_id')->references('id')->on($this->getTableName("TransactionType"));
         });
      }
 

@@ -12,7 +12,7 @@ class Thread extends Model {
     }
 
     public static function getModelRow($reference_key, $service_identifier) {
-        return self::where('reference_key', $reference_key)->where('service_identifier', $service_identifier)->first();
+        return self::query()->where('reference_key', $reference_key)->where('service_identifier', $service_identifier)->first();
     }
 
 }

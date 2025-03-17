@@ -12,11 +12,11 @@ class TransactionTrace extends Model {
     }
 
     public static function getLastTrace($transaction_id) : Model {
-        return self::where('transaction_id', $transaction_id)->latest()->first();
+        return self::query()->where('transaction_id', $transaction_id)->latest()->first();
     }
 
     public static function getTraceHistory($transaction_id) {
-        return self::where('transaction_id', $transaction_id)->get();
+        return self::query()->where('transaction_id', $transaction_id)->get();
     }
 
 

@@ -26,21 +26,21 @@ class TransactionHttpServiceProvider extends ServiceProvider {
         ], 'rmairena.transaction.http-config');
 
         $this->publishes([
-            __DIR__.'/../../database/migrations/01-create_transaction_type_table.php' => database_path('migrations/'.date('Y_m_d_His', time()).'_create_transaction_type_table.php'),
+            __DIR__.'/../../database/migrations/01-create_transaction_type_table.php' => database_path('migrations/'.date('Y_m_d_His', time()).'_01-create_transaction_type_table.php'),
         ], 'rmairena.transaction.http-migrations');
         $this->publishes([
-            __DIR__.'/../../database/migrations/02-create_thread_table.php' => database_path('migrations/'.date('Y_m_d_His', time()).'_create_thread_table.php'),
+            __DIR__.'/../../database/migrations/02-create_thread_table.php' => database_path('migrations/'.date('Y_m_d_His', time()).'_02-create_thread_table.php'),
         ], 'rmairena.transaction.http-migrations');
         $this->publishes([
-            __DIR__.'/../../database/migrations/03-create_transaction_table.php' => database_path('migrations/'.date('Y_m_d_His', time()).'_create_transaction_table.php'),
-        ], 'rmairena.transaction.http-migrations');
-
-        $this->publishes([
-            __DIR__.'/../../database/migrations/04-create_transaction_trace_table.php' => database_path('migrations/'.date('Y_m_d_His', time()).'_create_transaction_trace_table.php'),
+            __DIR__.'/../../database/migrations/03-create_transaction_table.php' => database_path('migrations/'.date('Y_m_d_His', time()).'_03-create_transaction_table.php'),
         ], 'rmairena.transaction.http-migrations');
 
         $this->publishes([
-            __DIR__.'/../../database/migrations/05-create_transaction_trace_log.php' => database_path('migrations/'.date('Y_m_d_His', time()).'_create_transaction_trace_log.php'),
+            __DIR__.'/../../database/migrations/04-create_transaction_trace_table.php' => database_path('migrations/'.date('Y_m_d_His', time()).'_04-create_transaction_trace_table.php'),
+        ], 'rmairena.transaction.http-migrations');
+
+        $this->publishes([
+            __DIR__.'/../../database/migrations/05-create_transaction_trace_log.php' => database_path('migrations/'.date('Y_m_d_His', time()).'_05-create_transaction_trace_log.php'),
         ], 'rmairena.transaction.http-migrations');
 
         $this->publishes([

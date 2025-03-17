@@ -44,7 +44,7 @@ class TransactionHttpServiceProvider extends ServiceProvider {
         ], 'rmairena.transaction.http-migrations');
 
         $this->publishes([
-            __DIR__.'/../../database/seeds/TransactionTypeSeeder.php' => database_path('seeds/TransactionTypeSeeder.php'),
+            __DIR__.'/../../database/seeds/TransactionTypeSeeder.php' => database_path('seeders/TransactionTypeSeeder.php'),
         ], 'rmairena.transaction.http-seeds');
     }
 }

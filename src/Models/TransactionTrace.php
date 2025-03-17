@@ -11,7 +11,7 @@ class TransactionTrace extends Model {
         return config('table-definition.TransactionTrace')['table_name'];
     }
 
-    public static function getLastTrace($transaction_id) : Model {
+    public static function getLastTrace($transaction_id) {
         return self::query()->where('transaction_id', $transaction_id)->latest()->first();
     }
 

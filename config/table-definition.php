@@ -2,18 +2,18 @@
 
 return [
     'Transaction'=> [
-        'table_name'=> 'transaction'
+        'table_name'=> 'transactions'
     ],
     'Thread'=> [
-        'table_name'=> 'thread'
+        'table_name'=> 'threads'
     ],
     'TransactionType'=> [
-        'table_name'=> 'transaction_type'
+        'table_name'=> 'transaction_types'
     ],
     'TransactionTrace'=> [
-        'table_name'=> 'transaction_trace'
+        'table_name'=> 'transaction_traces'
     ],
     'TransactionTraceLog'=> [
-        'table_name'=> 'transaction_trace_log'
+        'table_name'=> 'transaction_trace_logs'
     ],
 ];

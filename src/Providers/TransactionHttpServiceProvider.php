@@ -22,7 +22,7 @@ class TransactionHttpServiceProvider extends ServiceProvider {
     protected function publishResources()
     {
         $this->publishes([
-            __DIR__.'/../config/table-definition.php' => config_path('table-definition.php'),
+            __DIR__.'/../../config/table-definition.php' => config_path('table-definition.php'),
         ], 'rmairena.transaction.http-config');
 
         $this->publishes([

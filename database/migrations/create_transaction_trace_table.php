@@ -27,7 +27,7 @@ class CreateTransactionTrace extends Migration {
      }
 
      public function getTableName($table) : string {
-        return config('table-definition')[$table];
+        return config('table-definition')[$table]['table_name'];
      }
       /**
      * Reverse the migrations.

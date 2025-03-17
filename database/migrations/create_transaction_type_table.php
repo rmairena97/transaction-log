@@ -21,7 +21,7 @@ class CreateTransactionTypeTable extends Migration {
      }
 
      public function getTableName() : string {
-        return config('table-definition.TransactionType');
+        return config('table-definition.TransactionType')['table_name'];
      }
       /**
      * Reverse the migrations.

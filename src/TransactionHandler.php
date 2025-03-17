@@ -15,7 +15,7 @@ class TransactionHandler extends ThreadHandler {
 
     public function beginTransactionLog(string $reference_key, string $service_identifider, int $transaction_type_id) : void {
         $this->initThread($reference_key, $service_identifider);
-        if ($this->checkActiveThread()) {
+        if ($this->checkThreadInstance()) {
             $this->LoadTransaction();
         }
 
@@ -27,6 +27,7 @@ class TransactionHandler extends ThreadHandler {
 
 
     private function LoadTransaction() : void {
+        $this->transaction = TransactionModel::where('thread_id', $this->getThreadModel()->id)->first();
         $this->last_trace = TransactionTraceModel::getLastTrace($this->transaction->id);         
     }
 

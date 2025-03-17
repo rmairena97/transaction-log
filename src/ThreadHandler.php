@@ -21,19 +21,11 @@ class ThreadHandler {
 
     protected function initThread($reference_key, $service_identifier): void{
         $this->reference_key = $reference_key;
-        $this->service_identifier = $service_identifier;
-        
-        if ( $this->checkThreadInstance() && !$this->checkActiveThread()) throw new Exception("Thread is already been closed", 500);
+        $this->service_identifier = $service_identifier;        
     }
 
-    private function checkThreadInstance() : bool {
+    public function checkThreadInstance() : bool {
         return ThreadModel::getModelRow($this->reference_key, $this->service_identifier) !== null;
-    }
-
-
-    public function checkActiveThread() : bool {
-        // if ( $thread = $this->getThreadModel()) 
-        return $this->getThreadModel() !== null ? $this->getThreadModel()->active : true;
     }
 
     public function getThreadModel() : ?Model {

@@ -31,7 +31,7 @@ class TransactionHandler extends ThreadHandler {
         $this->last_trace = TransactionTraceModel::getLastTrace($this->transaction->id);         
     }
 
-    public function setTrace(sring $step_name, mixed $payload) : void {
+    public function setTrace(string $step_name, mixed $payload) : void {
        $this->last_trace = TransactionTraceModel::create([
             'step_name' => $step_name,
             'payload'=> $payload,

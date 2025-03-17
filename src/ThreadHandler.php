@@ -28,7 +28,7 @@ class ThreadHandler {
         return ThreadModel::getModelRow($this->reference_key, $this->service_identifier) !== null;
     }
 
-    public function getThreadModel() : ?Model {
+    public function getThreadModel() : mixed {
         return $this->thread ?? ThreadModel::getModelRow($this->reference_key, $this->service_identifier);
     }
 
